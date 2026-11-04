@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오늘 한눈에</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main id="app" class="dash">
+      <header class="dash-head">
+        <div>
+          <p class="dash-date" id="today-date"></p>
+          <h1 id="now-line">오늘 한눈에</h1>
+          <p class="dash-sub" id="next-line"></p>
+        </div>
+        <nav class="dash-links">
+          <a href="https://planning-web.pages.dev/" target="_blank" rel="noopener">planning-web</a>
+          <a href="https://next.altsis.org/bmr/bmrhs/boards" target="_blank" rel="noopener">Altsis</a>
+          <a href="https://classroom.google.com/" target="_blank" rel="noopener">Classroom</a>
+          <button id="logout" class="ghost" hidden>로그아웃</button>
+        </nav>
+      </header>
+
+      <div class="dash-grid">
+        <section class="card card-todo">
+          <h2>할 일 <span class="meta" id="todo-count"></span></h2>
+          <div id="todo-body"></div>
+        </section>
+
+        <section class="card card-weather">
+          <h2>날씨 <span class="meta">금산 남일면</span></h2>
+          <div id="weather"><p class="muted">불러오는 중…</p></div>
+        </section>
+
+        <section class="card card-today">
+          <h2>오늘 일정</h2>
+          <ol class="agenda" id="agenda"><li class="muted">로그인하면 보여요</li></ol>
+        </section>
+
+        <section class="card card-news">
+          <h2>오늘의 관점 <span class="meta" id="news-meta"></span></h2>
+          <p class="overview" id="news-overview" hidden></p>
+          <ul class="news" id="news"><li class="muted">불러오는 중…</li></ul>
+        </section>
+      </div>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
